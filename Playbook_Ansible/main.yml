@@ -22,7 +22,7 @@
   
   - name: recuperation du site
     get_url:
-      url: https://raw.githubusercontent.com/Pierre-Chesne/AzureDevOps-Ansible-Web-VM/master/SiteWeb.zip
+      url: https://raw.githubusercontent.com/Pierre-Chesne/Ansible-Actions/main/SiteWeb.zip
       dest: /home/pierrc/SiteWeb.zip
   
   - name: installation Unzip
@@ -42,4 +42,3 @@
       src: /home/pierrc/SiteWeb/
       dest: /var/www/html/
       remote_src: yes
-          
