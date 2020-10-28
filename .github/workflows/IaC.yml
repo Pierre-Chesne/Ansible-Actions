@@ -1,4 +1,4 @@
-name: CD VM(ARM) + Config(Ansible)
+name: CD VM(ARM)
 
 on:
   push:
