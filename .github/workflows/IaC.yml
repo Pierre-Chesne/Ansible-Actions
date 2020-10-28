@@ -3,6 +3,8 @@ name: CD VM(ARM) + Config(Ansible)
 on:
   push:
     branches: [ main ]
+    paths:
+    - "ARM/**"
 
 
 
