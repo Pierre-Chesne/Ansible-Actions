@@ -18,7 +18,7 @@ jobs:
     - name: Recuperation des sources - Git
       uses: actions/checkout@master
 
-    - name: Set ssh
+    - name: Run Playbook
       run: |
         mkdir ~/.ssh
         echo "$SSH_KEY" > ~/.ssh/id_rsa        
