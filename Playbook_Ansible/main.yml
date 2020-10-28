@@ -22,7 +22,7 @@
   
   - name: recuperation du site
     get_url:
-      url: https://raw.githubusercontent.com/Pierre-Chesne/Ansible-Actions/main/SiteWeb.zip
+      url: https://raw.githubusercontent.com/Pierre-Chesne/Ansible-Actions/main/Web/SiteWeb.zip
       dest: /home/pierrc/SiteWeb.zip
   
   - name: installation Unzip
