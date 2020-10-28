@@ -11,10 +11,8 @@ jobs:
   deploy:
     
     runs-on: ubuntu-latest
-
     
     steps:
-
     - name: Azure Login Az Cli
       uses: azure/login@v1
       with:
@@ -27,3 +25,16 @@ jobs:
         azcliversion: 2.9.0
         inlineScript: |
           az group create --name ${{ secrets.AZURE_RG }} --location ${{ secrets.AZURE_LOCATION }}
+
+
+    - name: Git - Recupération des sources
+      uses: actions/checkout@master
+
+
+    - name: Azure - Login ARM
+      uses: Azure/github-actions/login@master
+      env:
+        AZURE_SUBSCRIPTION: ${{ secrets.AZURE_SERVICE_SUBSCRIPTION }}
+        AZURE_SERVICE_APP_ID: ${{ secrets.AZURE_SERVICE_APP_ID }}
+        AZURE_SERVICE_PASSWORD: ${{ secrets.AZURE_SERVICE_PASSWORD }}
+        AZURE_SERVICE_TENANT: ${{ secrets.AZURE_SERVICE_TENANT }}
