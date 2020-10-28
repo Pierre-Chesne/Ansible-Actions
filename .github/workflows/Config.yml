@@ -27,7 +27,7 @@ jobs:
         chmod 700 ~/.ssh/
         chmod 600 ~/.ssh/*
         sudo sed -i "s/#host_key_checking = False/host_key_checking = False/" /etc/ansible/ansible.cfg        
-        ansible -i hosts.yml all -m ping -u pierrc        
+        ansible -i ~/Playbook_Ansible/hosts.yml all -m ping -u pierrc        
       
       env:
         SSH_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
